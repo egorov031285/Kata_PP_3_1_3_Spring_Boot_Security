@@ -1,7 +1,6 @@
 package ru.kata.spring.boot_security.demo.model;
 
 import javax.persistence.*;
-import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -19,7 +18,7 @@ public class User {
 
     private String password;
     
-    @ManyToMany(fetch = FetchType.LAZY)
+    @ManyToMany
     @JoinTable(
             name = "roles_users",
             joinColumns = @JoinColumn(name = "users_id"),
